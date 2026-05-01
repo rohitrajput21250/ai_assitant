@@ -1,6 +1,7 @@
 const { spawn } = require('node:child_process');
 const fs = require('node:fs');
 const path = require('node:path');
+const { runEngineFallback } = require('./engineFallback');
 
 class EngineUnavailableError extends Error {
   constructor(message) {
@@ -54,9 +55,7 @@ function runEngine(text, commands, options = {}) {
   const timeoutMs = options.timeoutMs || 1800;
 
   if (!enginePath) {
-    throw new EngineUnavailableError(
-      'C++ command engine is not built. Run `npm --prefix backend run build:cpp`, then restart the backend.'
-    );
+    return Promise.resolve(runEngineFallback(text, commands));
   }
 
   return new Promise((resolve, reject) => {
