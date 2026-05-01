@@ -4,7 +4,7 @@
   "private": true,
   "description": "A React, Three.js, physics, voice, Node, and C++ portfolio project.",
   "scripts": {
-    "render-build": "npm install && npm --prefix backend install && npm --prefix frontend install && cd frontend && npm run build",
+    "render-build": "npm install && npm --prefix backend install && npm --prefix frontend install --include=dev && cd frontend && npm run build",
     "start": "npm --prefix backend start",
     "install:all": "npm --prefix backend install && npm --prefix frontend install",
     "build:cpp": "npm --prefix backend run build:cpp",
