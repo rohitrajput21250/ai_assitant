@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: 3d-ai-voice-assistant
+    name: ai_assitant
     runtime: node
     plan: free
     repo: https://github.com/rohitrajput21250/ai_assitant
