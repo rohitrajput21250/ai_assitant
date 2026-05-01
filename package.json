@@ -1,0 +1,24 @@
+{
+  "name": "3d-ai-voice-assistant-experience",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A React, Three.js, physics, voice, Node, and C++ portfolio project.",
+  
+  "scripts": {
+    "install:all": "npm --prefix backend install && npm --prefix frontend install",
+    "build:cpp": "npm --prefix backend run build:cpp",
+    "dev": "node scripts/start-dev.mjs",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "build:frontend": "npm --prefix frontend run build"
+  },
+  "keywords": [
+    "react",
+    "threejs",
+    "voice-assistant",
+    "cpp",
+    "shaders",
+    "rapier"
+  ],
+  "license": "MIT"
+}

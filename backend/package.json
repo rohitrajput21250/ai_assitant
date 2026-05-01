@@ -1,0 +1,18 @@
+{
+  "name": "voice-orb-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "build:cpp": "node scripts/build-cpp.mjs",
+    "dev": "node server.js",
+    "start": "node server.js",
+    "test:engine": "node scripts/test-engine.mjs"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.3",
+    "helmet": "^7.1.0"
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.vite/
+.env
+.env.local
+*.log
+logs/
+
+cpp-engine/build/*
+!cpp-engine/build/.gitkeep
+cpp-engine/*.exe
+cpp-engine/command_engine
+
+backend/tmp/
