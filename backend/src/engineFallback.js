@@ -133,6 +133,13 @@ function scoreCommand(command, inputTokens, normalizedInput) {
  * @returns {{ ok: boolean, bestIntent: string, score: number, normalized: string, tokens: string[], matches: Array<{ intent: string, score: number }>, executable: null }}
  */
 function runEngineFallback(text, commands) {
+  if (!commands || !commands.length) {
+    return {
+      ok: false,
+      error: 'No COMMAND definitions were provided to the JS engine fallback.'
+    };
+  }
+
   const normalizedInput = normalize(text);
   const inputTokens = tokenize(text);
 

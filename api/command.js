@@ -22,8 +22,7 @@ module.exports = async (req, res) => {
     });
     res.status(200).json(result);
   } catch (error) {
-    const status = error.code === 'CPP_ENGINE_UNAVAILABLE' ? 503 : 500;
-    res.status(status).json({
+    res.status(500).json({
       ok: false,
       error: error.message,
       code: error.code || 'COMMAND_PROCESSING_FAILED'
