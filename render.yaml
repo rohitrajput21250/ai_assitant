@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: 3d-ai-voice-assistant
+    runtime: node
+    plan: free
+    repo: https://github.com/rohitrajput21250/ai_assitant
+    branch: main
+    buildCommand: npm run render-build
+    startCommand: npm start
+    healthCheckPath: /api/health
+    autoDeployTrigger: commit
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: NODE_ENV
+        value: production
